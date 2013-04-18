@@ -16,20 +16,20 @@
  * You should have received a copy of the GNU General Public license
  * along with lightshell. If not, see <http://www.gnu.org/licenses/>.
  */
-package test.commands;
+package example.commands;
 
 import lightshell.Command;
 
-public class Conditions extends Command {
-    protected String getName() { return "conditions"; }
-    protected String getShortHelp() { return "show license conditions"; }
-    protected String getUsage() { return "conditions"; }
+public class Warranty extends Command {
+    protected String getName() { return "warranty"; }
+    protected String getShortHelp() { return "show license warranty"; }
+    protected String getUsage() { return "warranty"; }
     
     protected String execute(String arg) {
         return
-       "This program is free software: you can redistribute it and/or modify\n"
-     + "it under the terms of the GNU General Public License as published by\n"
-     + "the Free Software Foundation, either version 3 of the License, or\n"
-     + "(at your option) any later version.";
+        "This program is distributed in the hope that it will be useful,\n"
+      + "but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
+      + "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
+      + "GNU General Public License for more details.";
     }
 }

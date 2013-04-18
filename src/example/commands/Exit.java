@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public license
  * along with lightshell. If not, see <http://www.gnu.org/licenses/>.
  */
-package test.commands;
+package example.commands;
 
 import java.util.HashSet;
 import java.util.Set;

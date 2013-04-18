@@ -1,9 +1,9 @@
-package test;
+package example;
 
 import lightshell.Shell;
-import test.commands.Conditions;
-import test.commands.Exit;
-import test.commands.Warranty;
+import example.commands.Conditions;
+import example.commands.Exit;
+import example.commands.Warranty;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,7 +17,7 @@ public class Main {
         shell.addCommand(cmd2);
         shell.addCommand(cmd3);
 
-        shell.setWelcomeMsg("Welcome to a lightshell test.");
+        shell.setWelcomeMsg("Welcome to a lightshell example.");
         shell.setPrompt("lightshell");
         shell.run();
     }
