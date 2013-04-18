@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+
+<project name="lightshell" default="jar">
+  <target name="clean" description="remove intermediate files">
+    <delete dir="bin"/>
+  </target>
+
+  <target name="clobber" depends="clean" description="remove all artifact files">
+    <delete file="lightshell-test.jar"/>
+    <delete file="lightshell.jar"/>
+  </target>
+
+  <target name="compile" description="compile the Java source code to class files">
+    <mkdir dir="bin"/>
+    <javac includeantruntime="false" srcdir="src" destdir="bin">
+    </javac>
+  </target>
+
+  <target name="jar" depends="compile" description="create a Jar file for the library">
+    <jar destfile="lightshell.jar" filesetmanifest="skip">
+      <fileset dir="bin" includes="**/*.class" excludes="test/*.class"/>
+    </jar>
+  </target>
+
+  <target name="test" depends="compile" description="create a runnable Jar file for testing purposes">
+    <jar destfile="lightshell-test.jar" filesetmanifest="skip">
+      <fileset dir="bin" includes="**/*.class"/>
+      <manifest>
+        <attribute name="Main-class" value="test/Main"/>
+      </manifest>
+    </jar>
+  </target>
+</project>
