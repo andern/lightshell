@@ -191,7 +191,8 @@ public class Shell {
             System.out.format("%s> ", prompt);
             String strcmd = s.nextLine();
 
-            System.out.println(parse(strcmd));
+            String res = parse(strcmd);
+            if (res != null) System.out.println(parse(strcmd));
         }
     }
 
