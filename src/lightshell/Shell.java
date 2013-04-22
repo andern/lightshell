@@ -192,7 +192,7 @@ public class Shell {
             String strcmd = s.nextLine();
 
             String res = parse(strcmd);
-            if (res != null) System.out.println(parse(strcmd));
+            if (res != null) System.out.println(res);
         }
     }
 
