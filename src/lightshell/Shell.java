@@ -18,7 +18,7 @@
  */
 package lightshell;
 
-import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -32,7 +32,7 @@ import java.util.Set;
 public class Shell {
     private String welcome;
     private String prompt = "CHANGEPROMPT";
-    private Set<Command> cmds = new HashSet<Command>();
+    private Set<Command> cmds = new LinkedHashSet<Command>();
 
 
 
